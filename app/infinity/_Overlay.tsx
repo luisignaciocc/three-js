@@ -15,8 +15,8 @@ const _ = () => {
         </a>
         <br />
         <br />
-        Don’t behave as if you are destined to live forever. What’s fated hangs
-        over you. As long as you live and while you can, become good now. -
+        "Don’t behave as if you are destined to live forever. What’s fated hangs
+        over you. As long as you live and while you can, become good now" -
         Marcus Aurelius
       </p>
     </div>

@@ -1,5 +1,5 @@
-import { InteractiveDots } from "@/components/interactive-dots";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <InteractiveDots />;
+  return redirect("/interactive-dots");
 }

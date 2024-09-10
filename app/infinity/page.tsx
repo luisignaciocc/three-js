@@ -1,8 +1,7 @@
 "use client";
 
-import * as THREE from "three";
-import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
 import Figure8Particles from "./_Figure8Particles";
 import FloatingParticles from "./_FloatingParticles";

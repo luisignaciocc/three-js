@@ -1,6 +1,5 @@
-import React, { useRef, useMemo, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import React, { useMemo, useRef } from "react";
 import * as THREE from "three";
 
 const FLOATING_PARTICLE_COUNT = 100;
@@ -40,7 +39,7 @@ const FloatingParticles: React.FC = () => {
     [],
   );
 
-  useFrame((state, delta) => {
+  useFrame((_state, _delta) => {
     if (instancedMesh.current) {
       for (let i = 0; i < FLOATING_PARTICLE_COUNT; i++) {
         // Update position

@@ -1,6 +1,5 @@
-import React, { useRef, useMemo, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import React, {useMemo, useRef } from "react";
 import * as THREE from "three";
 
 const PARTICLE_COUNT = 9000;

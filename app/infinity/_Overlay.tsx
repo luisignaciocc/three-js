@@ -1,7 +1,7 @@
 const _ = () => {
   return (
     <div className="fixed z-10 text-white inset-0 blur-[0.5px] flex items-center justify-end p-6 gap-2 flex-col pointer-events-none">
-      <h5 className="text-2xl">Three.js Playground</h5>
+      <h5 className="text-2xl">Ignacio's Three.js Playground</h5>
       <p className="text-xs text-center opacity-70 max-w-xs">
         This is a playground for Three.js. It's a place where I can experiment
         with different ideas and concepts. The code is available on{" "}

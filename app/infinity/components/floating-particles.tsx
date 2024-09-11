@@ -3,7 +3,7 @@ import React, { useMemo, useRef } from "react";
 import * as THREE from "three";
 
 const FLOATING_PARTICLE_COUNT = 100;
-const SCENE_SIZE = 5; // Size of the cubic space for floating particles
+const SCENE_SIZE = 5;
 
 const FloatingParticles: React.FC = () => {
   const instancedMesh = useRef<THREE.InstancedMesh>(null);
@@ -42,10 +42,8 @@ const FloatingParticles: React.FC = () => {
   useFrame((_state, _delta) => {
     if (instancedMesh.current) {
       for (let i = 0; i < FLOATING_PARTICLE_COUNT; i++) {
-        // Update position
         positions[i].add(velocities[i]);
 
-        // Boundary check and velocity reversal
         ["x", "y", "z"].forEach((value) => {
           const axis = value as "x" | "y" | "z";
           if (Math.abs(positions[i][axis]) > SCENE_SIZE / 2) {
@@ -55,7 +53,6 @@ const FloatingParticles: React.FC = () => {
           }
         });
 
-        // Small random velocity change
         velocities[i].add(
           new THREE.Vector3(
             (Math.random() - 0.5) * 0.0001,
@@ -64,7 +61,6 @@ const FloatingParticles: React.FC = () => {
           ),
         );
 
-        // Apply position to instance
         dummy.position.copy(positions[i]);
         dummy.scale.setScalar(0.01);
         dummy.updateMatrix();

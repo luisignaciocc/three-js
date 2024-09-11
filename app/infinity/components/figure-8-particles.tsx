@@ -1,11 +1,11 @@
 import { useFrame } from "@react-three/fiber";
-import React, {useMemo, useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import * as THREE from "three";
 
 const PARTICLE_COUNT = 9000;
 const CURVE_SEGMENTS = 64;
 const THICKNESS = 2.5;
-const LERP_FACTOR = 0.01; // Adjust this value to control smoothness (0-1)
+const LERP_FACTOR = 0.01;
 
 const Figure8Particles: React.FC = () => {
   const instancedMesh = useRef<THREE.InstancedMesh>(null);
@@ -72,7 +72,6 @@ const Figure8Particles: React.FC = () => {
   );
 };
 
-// Helper function to get a point on the tube's surface
 function getPointOnTube(
   curve: THREE.CatmullRomCurve3,
   t: number,

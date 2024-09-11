@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 const navItems = [
   { name: "Infinity", path: "/infinity" },
   { name: "Interactive Dots", path: "/interactive-dots" },
+  { name: "Jump", path: "/jump" },
 ];
 
 export default function RootLayout({

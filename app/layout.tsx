@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Link from "next/link";
@@ -16,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Three.js Playground",
-  description: "A playground for Three.js",
+  title: "Ignacio's Playground",
+  description: "A playground to experiment with different technologies",
 };
 
 const navItems = [
@@ -54,7 +55,15 @@ export default function RootLayout({
                 >
                   <div>
                     <h1 className="text-xl ml-2 pt-2 mb-4">
-                      Ignacio&apos;s Playground
+                      <a
+                        href="https://www.luisignacio.cc/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        Ignacio&apos;s
+                      </a>{" "}
+                      Playground
                     </h1>
                     <ul className="space-y-2">
                       {navItems.map((item) => (
@@ -92,6 +101,7 @@ export default function RootLayout({
             {children}
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );

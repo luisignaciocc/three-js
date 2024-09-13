@@ -25,6 +25,7 @@ const navItems = [
   { name: "Infinity", path: "/infinity" },
   { name: "Interactive Dots", path: "/interactive-dots" },
   { name: "Jump", path: "/jump" },
+  { name: "Cars", path: "/cars" },
 ];
 
 export default function RootLayout({
